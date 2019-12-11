@@ -41,3 +41,8 @@ $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
 
+let currentplayer = "x"
+let turns = 0
+let gameover = false 
+
+fuction performLogic() 
