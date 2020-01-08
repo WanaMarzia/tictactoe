@@ -41,8 +41,24 @@ $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
 
-let currentplayer = "x"
-let turns = 0
-let gameover = false 
+let user = "x"; 
+let currentPlayer = "O";
+let totalturns = 0; 
+let game = false;
+function performLogic(buttonId, tileId){
+    $(buttonId).hide();
+    totalturns = totalturns + 1;
+    
+if (totalturns === 9){
+$("#title").text("You have a tie!")
+}
+    console.log(totalturns);
+    if (currentPlayer === "o"){
+        currentPlayer = "x";
+    }else{
+        currentPlayer ="o";
+    }
+    $(tileId).text(currentPlayer);
 
-fuction performLogic() 
+
+}
